@@ -138,35 +138,35 @@
               <h3>Book Your Car Shipment</h3>
               <form action="forms/car-shipment.php" method="post" class="php-email-form">
                 <div class="row gy-3">
-                  
+          
                   <!-- Name -->
                   <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                   </div>
-                  
+          
                   <!-- Email -->
                   <div class="col-md-6">
-                    <input type="email" name="email" class="form-control" placeholder="Your Email" required="">
+                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
                   </div>
-                  
+          
                   <!-- Phone -->
                   <div class="col-md-6">
-                    <input type="tel" name="phone" class="form-control" placeholder="Your Phone" required="">
+                    <input type="tel" name="phone" class="form-control" placeholder="Your Phone" required>
                   </div>
-                  
+          
                   <!-- Pickup Location -->
                   <div class="col-md-6">
-                    <input type="text" name="pickup" class="form-control" placeholder="Pickup Location" required="">
+                    <input type="text" name="pickup" class="form-control" placeholder="Pickup Location" required>
                   </div>
-                  
+          
                   <!-- Drop-off Location -->
                   <div class="col-md-6">
-                    <input type="text" name="dropoff" class="form-control" placeholder="Drop-off Location" required="">
+                    <input type="text" name="dropoff" class="form-control" placeholder="Drop-off Location" required>
                   </div>
-                  
+          
                   <!-- Vehicle Type -->
                   <div class="col-md-6 position-relative">
-                    <select name="vehicle_type" class="form-control pe-5" required>
+                    <select name="vehicle_type" class="form-control custom-select" required>
                       <option value="">Vehicle Type</option>
                       <option value="Car">Car</option>
                       <option value="SUV">SUV</option>
@@ -174,21 +174,37 @@
                       <option value="Van">Van</option>
                       <option value="RV">RV</option>
                     </select>
-                    <!-- Dropdown Icon -->
-                    <i class="bi bi-chevron-down position-absolute top-50 end-0 translate-middle-y me-3"></i>
                   </div>
-                  
-                  
-                  <!-- Vehicle Details -->
-                  <div class="col-12">
-                    <input type="text" name="vehicle_details" class="form-control" placeholder="Vehicle Make, Model, Year" required="">
+          
+                  <!-- Car Make -->
+                  <div class="col-md-6">
+                    <input type="text" name="car_make" class="form-control" placeholder="Make" required>
                   </div>
-                  
+          
+                  <!-- Car Model -->
+                  <div class="col-md-6">
+                    <input type="text" name="car_model" class="form-control" placeholder="Model" required>
+                  </div>
+          
+                  <!-- Car Year -->
+                  <div class="col-md-6">
+                    <input type="number" name="car_year" class="form-control" placeholder="Year" min="1900" max="2099" required>
+                  </div>
+          
+                  <!-- Vehicle Condition -->
+                  <div class="col-md-6 position-relative">
+                    <select name="vehicle_condition" class="form-control custom-select" required>
+                      <option value="">Condition</option>
+                      <option value="Operable">Operable</option>
+                      <option value="Inoperable">Inoperable</option>
+                    </select>
+                  </div>
+          
                   <!-- Additional Notes -->
                   <div class="col-12">
                     <textarea name="message" class="form-control" rows="3" placeholder="Any special instructions (e.g., fragile, urgent)"></textarea>
                   </div>
-                  
+          
                   <!-- Submit -->
                   <div class="col-12">
                     <div class="loading">Loading</div>
@@ -200,10 +216,9 @@
               </form>
             </div>
           </div>
+          </div>
+          </div>
           
-        </div>
-      </div>
-
       <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="400">
         <div class="scroll-text">Scroll to Explore</div>
         <div class="scroll-arrow">
@@ -212,6 +227,7 @@
       </div>
 
     </section><!-- /Hero Section -->
+
 
     <!-- About Section -->
     <section id="about" class="about section">
