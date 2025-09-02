@@ -1,25 +1,15 @@
-/**
-* Template Name: Platia
-* Template URL: https://bootstrapmade.com/platia-bootstrap-restaurant-template/
-* Updated: Aug 11 2025 with Bootstrap v5.3.7
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 
 @charset "UTF-8";
 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
-/* Fonts */
+
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Source Serif Pro",  sans-serif;
   --nav-font: "Roboto Slab",  sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+
 :root { 
   --background-color: #f8efeb; /* Background color for the entire website, including individual sections */
   --default-color: #352a26; /* Default color used for the majority of the text content across the entire website */
@@ -1051,6 +1041,12 @@ section,
   margin-bottom: 25px;
 }
 
+
+.hero .hero-text .hero-title:hover {
+  color: var(--accent-color);
+}
+
+
 @media (max-width: 768px) {
   .hero .hero-text .hero-title {
     font-size: 2.5rem;
@@ -1977,470 +1973,51 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# Chefs Section
---------------------------------------------------------------*/
-.chefs {
-  /* Custom properties */
-  --card-radius: 14px;
-  --photo-radius: 18px;
-  --shadow-color: color-mix(in srgb, var(--default-color), transparent 92%);
-  --soft-border: color-mix(in srgb, var(--default-color), transparent 85%);
-  --muted-text: color-mix(in srgb, var(--default-color), transparent 40%);
-  --accent-soft: color-mix(in srgb, var(--accent-color), transparent 85%);
-  --accent-tint: color-mix(in srgb, var(--accent-color), white 85%);
+.brand-logo {
+  max-width: 120px;
+  margin: auto;
+  /* filter: grayscale(100%); */
+  transition: 0.3s;
 }
-
-.chefs .featured-chef .chef-photo {
-  position: relative;
-  border-radius: var(--photo-radius);
-  overflow: hidden;
-  box-shadow: 0 16px 40px var(--shadow-color);
+.brand-logo:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
 }
-
-.chefs .featured-chef .chef-photo img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  transform: scale(1.02);
-  transition: transform 0.3s ease;
+.ship-by-state {
+ 
+  padding: 80px 0;
+  color: #fff;
 }
-
-.chefs .featured-chef .chef-photo:hover img {
-  transform: scale(1.05);
-}
-
-.chefs .featured-chef .chef-photo .badge-overlay {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-}
-
-.chefs .featured-chef .chef-photo .badge-overlay .pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
-  font-size: 12px;
-  border-radius: 999px;
-  color: var(--default-color);
-  background: var(--accent-tint);
-  border: 1px solid var(--accent-soft);
-}
-
-.chefs .featured-chef .chef-photo .badge-overlay .pill i {
-  color: var(--accent-color);
-}
-
-.chefs .featured-chef .chef-content .topline {
-  padding: 4px 10px;
-  border-radius: 999px;
-  font-size: 12px;
-  color: var(--accent-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
-  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 80%);
-}
-
-.chefs .featured-chef .chef-content .name {
-  margin: 0 0 6px 0;
-}
-
-.chefs .featured-chef .chef-content .role {
-  margin: 0;
-  color: var(--muted-text);
-  font-weight: 500;
-}
-
-.chefs .featured-chef .chef-content .bio {
-  max-width: 56ch;
-}
-
-.chefs .featured-chef .chef-content .awards .award-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-size: 13px;
-  color: var(--default-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 90%);
-  border: 1px solid var(--accent-soft);
-}
-
-.chefs .featured-chef .chef-content .awards .award-badge i {
-  color: var(--accent-color);
-}
-
-.chefs .featured-chef .chef-content .signature img {
-  max-width: 150px;
-  opacity: 0.85;
-  filter: drop-shadow(0 2px 6px var(--shadow-color));
-}
-
-.chefs .team-grid .chef-card {
-  background: var(--surface-color);
-  border: 1px solid var(--soft-border);
-  border-radius: var(--card-radius);
-  box-shadow: 0 12px 32px var(--shadow-color);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.chefs .team-grid .chef-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 44px color-mix(in srgb, var(--default-color), transparent 88%);
-}
-
-.chefs .team-grid .chef-card .image-wrapper {
-  position: relative;
-  overflow: hidden;
-  border-top-left-radius: var(--card-radius);
-  border-top-right-radius: var(--card-radius);
-  background: color-mix(in srgb, var(--accent-color), transparent 94%);
-}
-
-.chefs .team-grid .chef-card .image-wrapper img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  transform: scale(1.01);
-  transition: transform 0.3s ease;
-}
-
-.chefs .team-grid .chef-card .image-wrapper .social {
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
-  display: flex;
-  gap: 8px;
-  opacity: 0;
-  transform: translateY(8px);
-  transition: all 0.3s ease;
-}
-
-.chefs .team-grid .chef-card .image-wrapper .social a {
-  width: 36px;
-  height: 36px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--background-color);
-  color: var(--default-color);
-  border: 1px solid var(--soft-border);
-  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
-}
-
-.chefs .team-grid .chef-card .image-wrapper .social a:hover {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  transform: translateY(-2px);
-}
-
-.chefs .team-grid .chef-card:hover .image-wrapper img {
-  transform: scale(1.06);
-}
-
-.chefs .team-grid .chef-card:hover .image-wrapper .social {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.chefs .team-grid .chef-card .content .name {
-  margin: 0;
-}
-
-.chefs .team-grid .chef-card .content .role {
-  color: var(--muted-text);
-  font-size: 14px;
-  margin-bottom: 8px;
-}
-
-.chefs .team-grid .chef-card .content .excerpt {
-  font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin-bottom: 12px;
-}
-
-.chefs .team-grid .chef-card .content .mini-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 8px;
-  font-size: 12px;
-  border-radius: 999px;
-  color: var(--default-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
-  border: 1px solid var(--accent-soft);
-}
-
-.chefs .team-grid .chef-card .content .mini-badge i {
-  color: var(--accent-color);
-}
-
-.chefs .swiper-wrapper {
-  height: auto !important;
-}
-
-@media (max-width: 768px) {
-  .chefs .featured-chef .chef-content .bio {
-    max-width: 100%;
-  }
-
-  .chefs .team-grid .chef-card .image-wrapper .social a {
-    width: 34px;
-    height: 34px;
-  }
-}
-
-/*--------------------------------------------------------------
-# Book A Table Section
---------------------------------------------------------------*/
-.book-a-table {
-  position: relative;
-}
-
-.book-a-table .reservation-container {
-  background: var(--surface-color);
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 10px 40px color-mix(in srgb, var(--default-color), transparent 90%);
-}
-
-.book-a-table .reservation-form-section {
-  padding: 3rem 2.5rem;
-  background: linear-gradient(135deg, var(--surface-color) 0%, color-mix(in srgb, var(--accent-color), transparent 95%) 100%);
-  height: 100%;
-}
-
-.book-a-table .reservation-form-section .form-header {
-  margin-bottom: 2rem;
-}
-
-.book-a-table .reservation-form-section .form-header h3 {
-  font-size: 2.2rem;
+.ship-by-state .section-header h2 {
+  font-size: 28px;
   font-weight: 700;
-  margin-bottom: 1rem;
-  color: var(--heading-color);
+  margin-bottom: 10px;
+  color: #fff;
 }
-
-.book-a-table .reservation-form-section .form-header p {
-  color: color-mix(in srgb, var(--default-color), transparent 25%);
-  font-size: 1rem;
-  line-height: 1.6;
+.ship-by-state .section-header p {
+  color: #ddd;
+  margin-bottom: 40px;
 }
-
-.book-a-table .reservation-form-section .form-control,
-.book-a-table .reservation-form-section .form-select {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-size: 0.95rem;
-  padding: 0.9rem 1.2rem;
-  border: 2px solid color-mix(in srgb, var(--default-color), transparent 85%);
+.state-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+.state-box {
+  background: var(--accent-color);
+  padding: 14px 18px;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.15);
 }
-
-.book-a-table .reservation-form-section .form-control:focus,
-.book-a-table .reservation-form-section .form-select:focus {
-  border-color: var(--accent-color);
-  box-shadow: 0 0 0 0.15rem color-mix(in srgb, var(--accent-color), transparent 75%);
-  background-color: var(--background-color);
-}
-
-.book-a-table .reservation-form-section .form-control::placeholder,
-.book-a-table .reservation-form-section .form-select::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 55%);
-}
-
-.book-a-table .reservation-form-section .btn-reserve {
-  background: linear-gradient(45deg, var(--accent-color), color-mix(in srgb, var(--accent-color), blue 15%));
-  color: var(--contrast-color);
-  border: none;
-  padding: 1rem 2rem;
-  font-weight: 600;
-  font-size: 1.1rem;
-  border-radius: 8px;
-  margin-top: 1.5rem;
-  transition: all 0.3s ease;
-}
-
-.book-a-table .reservation-form-section .btn-reserve:hover {
-  background: linear-gradient(45deg, color-mix(in srgb, var(--accent-color), black 10%), color-mix(in srgb, var(--accent-color), blue 25%));
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 65%);
-}
-
-.book-a-table .reservation-info-section {
-  background: var(--background-color);
-  padding: 2rem;
-}
-
-.book-a-table .reservation-info-section .hero-image {
-  position: relative;
-  margin-bottom: 2rem;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.book-a-table .reservation-info-section .hero-image img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.book-a-table .reservation-info-section .hero-image .overlay-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(transparent, color-mix(in srgb, #000000, transparent 20%));
-  padding: 2rem 1.5rem 1.5rem;
-  color: var(--contrast-color);
-}
-
-.book-a-table .reservation-info-section .hero-image .overlay-content h4 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: var(--contrast-color);
-}
-
-.book-a-table .reservation-info-section .hero-image .overlay-content p {
-  margin: 0;
-  font-size: 0.95rem;
-  opacity: 0.9;
-}
-
-.book-a-table .reservation-info-section .hero-image:hover img {
-  transform: scale(1.05);
-}
-
-.book-a-table .reservation-info-section .info-cards {
-  margin-bottom: 1.5rem;
-}
-
-.book-a-table .reservation-info-section .info-cards .info-card {
-  background: var(--surface-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  border-radius: 10px;
-  padding: 1.5rem;
-  height: 100%;
-  transition: all 0.3s ease;
-}
-
-.book-a-table .reservation-info-section .info-cards .info-card:hover {
+.state-box:hover {
+  background: #ff6b35;
+  color: #fff;
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 85%);
-  border-color: var(--accent-color);
 }
-
-.book-a-table .reservation-info-section .info-cards .info-card .card-icon {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(45deg, var(--accent-color), color-mix(in srgb, var(--accent-color), blue 20%));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-
-.book-a-table .reservation-info-section .info-cards .info-card .card-icon i {
-  font-size: 1.5rem;
-  color: var(--contrast-color);
-}
-
-.book-a-table .reservation-info-section .info-cards .info-card .card-content h5 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: var(--heading-color);
-}
-
-.book-a-table .reservation-info-section .info-cards .info-card .card-content p {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  margin: 0;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-}
-
-.book-a-table .reservation-info-section .info-cards .info-card .card-content small {
-  font-size: 0.8rem;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-}
-
-.book-a-table .reservation-info-section .info-cards .info-card .card-content em {
-  color: color-mix(in srgb, var(--accent-color), black 20%);
-  font-weight: 500;
-}
-
-.book-a-table .reservation-info-section .additional-info .info-highlight {
-  background: color-mix(in srgb, var(--accent-color), transparent 90%);
-  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 70%);
-  border-radius: 8px;
-  padding: 1rem 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.book-a-table .reservation-info-section .additional-info .info-highlight i {
-  color: var(--accent-color);
-  font-size: 1.2rem;
-}
-
-.book-a-table .reservation-info-section .additional-info .info-highlight span {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--default-color);
-}
-
-@media (max-width: 991px) {
-  .book-a-table .reservation-form-section {
-    padding: 2.5rem 2rem;
-    margin-bottom: 0;
-  }
-
-  .book-a-table .reservation-info-section {
-    padding: 2rem 1.5rem;
-  }
-
-  .book-a-table .hero-image {
-    margin-bottom: 1.5rem !important;
-  }
-
-  .book-a-table .hero-image img {
-    height: 200px !important;
-  }
-}
-
-@media (max-width: 767px) {
-  .book-a-table .reservation-container {
-    border-radius: 8px;
-  }
-
-  .book-a-table .reservation-form-section {
-    padding: 2rem 1.5rem;
-  }
-
-  .book-a-table .reservation-form-section .form-header h3 {
-    font-size: 1.8rem;
-  }
-
-  .book-a-table .reservation-info-section {
-    padding: 1.5rem;
-  }
-
-  .book-a-table .reservation-info-section .hero-image img {
-    height: 180px !important;
-  }
-
-  .book-a-table .reservation-info-section .info-card {
-    padding: 1.25rem !important;
-  }
-}
-
 /*--------------------------------------------------------------
 # Location Section
 --------------------------------------------------------------*/
