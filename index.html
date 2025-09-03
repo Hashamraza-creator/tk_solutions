@@ -164,17 +164,27 @@
                     <input type="text" name="dropoff" class="form-control" placeholder="Drop-off Location" required>
                   </div>
           
-                  <!-- Vehicle Type -->
-                  <div class="col-md-6 position-relative">
-                    <select name="vehicle_type" class="form-control custom-select" required>
-                      <option value="">Vehicle Type</option>
-                      <option value="Car">Car</option>
-                      <option value="SUV">SUV</option>
-                      <option value="Truck">Truck</option>
-                      <option value="Van">Van</option>
-                      <option value="RV">RV</option>
-                    </select>
-                  </div>
+                <!-- Vehicle Type -->
+<!-- Vehicle Type -->
+<!-- Vehicle Type -->
+<div class="col-md-6 position-relative">
+  <div class="position-relative">
+    <select name="vehicle_type" class="form-control custom-select text-secondary" required
+    onchange="this.classList.remove('text-secondary'); this.classList.add('text-white'); this.nextElementSibling.classList.add('text-white');">
+      <option value="" disabled selected >Vehicle Type</option>
+      <option value="Car">Car</option>
+      <option value="SUV">SUV</option>
+      <option value="Truck">Truck</option>
+      <option value="Van">Van</option>
+      <option value="RV">RV</option>
+    </select>
+    <i class="bi bi-caret-down-fill position-absolute top-50 end-0 translate-middle-y me-3 text-secondary"></i>
+  </div>
+</div>
+
+
+
+                  
           
                   <!-- Car Make -->
                   <div class="col-md-6">
@@ -191,15 +201,18 @@
                     <input type="number" name="car_year" class="form-control" placeholder="Year" min="1900" max="2099" required>
                   </div>
           
-                  <!-- Vehicle Condition -->
-                  <div class="col-md-6 position-relative">
-                    <select name="vehicle_condition" class="form-control custom-select" required>
-                      <option value="">Condition</option>
-                      <option value="Operable">Operable</option>
-                      <option value="Inoperable">Inoperable</option>
-                    </select>
-                  </div>
-          
+                <!-- Vehicle Condition -->
+                <div class="col-md-6 position-relative">
+                  <select name="vehicle_condition" class="form-control custom-select pe-5 text-secondary" required
+                          onchange="this.classList.remove('text-secondary'); this.classList.add('text-white'); this.nextElementSibling.classList.add('text-white');">
+                    <option value="" disabled selected hidden>Condition</option>
+                    <option value="Operable">Operable</option>
+                    <option value="Inoperable">Inoperable</option>
+                  </select>
+                  <i class="bi bi-caret-down-fill position-absolute top-50 end-0 translate-middle-y me-3 text-secondary"></i>
+                </div>
+                
+
                   <!-- Additional Notes -->
                   <div class="col-12">
                     <textarea name="message" class="form-control" rows="3" placeholder="Any special instructions (e.g., fragile, urgent)"></textarea>
