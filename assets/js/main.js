@@ -205,6 +205,37 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     requestAnimationFrame(update);
   };
+  // <!-- Accordion Script -->
+ 
+    document.querySelectorAll(".faq-question").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const item = btn.parentElement;
+        const container = item.parentElement;
+  
+        // Close others
+        container.querySelectorAll(".faq-item").forEach(f => {
+          if (f !== item) f.classList.remove("active");
+        });
+  
+        // Toggle this one
+        item.classList.toggle("active");
+      });
+    });
+  // <!-- Initialize Swiper -->
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      320: { slidesPerView: 2 },
+      768: { slidesPerView: 3 },
+      1024: { slidesPerView: 5 },
+    },
+  });
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {

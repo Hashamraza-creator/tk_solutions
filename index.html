@@ -55,8 +55,48 @@
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
           <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.webp" alt=""> -->
-          <h1 class="sitename">Tk........</h1>
+          <!-- Inline SVG Logo -->
+<div style="max-width: 600px; margin: 0 auto; text-align: center;">
+  <?xml version="1.0" encoding="UTF-8"?>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1400" 
+       style="width: 100%; height: auto; max-width: 80px;" 
+       role="img" aria-label="TK Transport Logo">
+    <title>TK Transport Logo (v2)</title>
+    <desc>Transparent-background SVG: orange TK, gray road with yellow stripe, white TRANSPORT wordmark on dark bar.</desc>
+    <defs>
+      <style type="text/css">
+        .orange { fill: #F38B00; }
+        .dark { fill: #3A3E43; }
+        .yellow { fill: #F4C21F; }
+        .white { fill: #FFFFFF; }
+      </style>
+    </defs>
+
+    <!-- TK letters -->
+    <g id="TK" transform="translate(60,40) scale(1.05)">
+      <path class="orange" d="M40 80h720l-40 120h-200v360l-120 120V200H160z"/>
+      <path class="orange" d="M740 80h320l-280 240 260 220h-220l-160-140-80 60v-400z"/>
+    </g>
+
+    <!-- Road swoosh -->
+    <g id="road" transform="translate(60,360)">
+      <path class="dark" d="M120 520 C360 280 720 220 1120 160 L1100 180 C740 240 420 360 180 600 L120 520 Z"/>
+      <path class="orange" d="M420 620 C580 460 800 360 1100 200 L1080 220 C820 360 620 470 460 640 L420 620 Z"/>
+      <path class="yellow" d="M320 560 C560 340 820 260 1100 200 L1108 195 C840 250 580 340 360 560 L320 560 Z"/>
+    </g>
+
+    <!-- TRANSPORT wordmark -->
+    <g id="transport" transform="translate(60,920)">
+      <rect class="dark" x="0" y="0" rx="24" ry="24" width="1080" height="180"/>
+      <text x="540" y="125" text-anchor="middle"
+            font-family="Montserrat, Arial, Helvetica, sans-serif"
+            font-size="110" font-weight="800" class="white">TRANSPORT</text>
+    </g>
+  </svg>
+</div>
+
+     
+          
         </a>
 
         <nav id="navmenu" class="navmenu">
@@ -721,26 +761,10 @@
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-<!-- Initialize Swiper -->
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    loop: true,
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      320: { slidesPerView: 2 },
-      768: { slidesPerView: 3 },
-      1024: { slidesPerView: 5 },
-    },
-  });
-</script>
 
 
-<!-- ======= End Why Choose Us & Brands Section ======= -->
+
+
 
 
     <!-- ======= Ship By State Section ======= -->
@@ -757,7 +781,7 @@
       <div class="col-12">
         <div class="state-grid">
 
-          <!-- All 50 States -->
+      
           <a href="alabama-car-shipping" class="state-box">Alabama Car Shipping</a>
           <a href="alaska-car-shipping" class="state-box">Alaska Car Shipping</a>
           <a href="arizona-car-shipping" class="state-box">Arizona Car Shipping </a>
@@ -815,7 +839,7 @@
 
   </div>
 </section>
-<!-- ======= End Ship By State Section ======= -->
+
 
 
 
@@ -834,7 +858,7 @@
         </div>
       </div>
 
-      <!-- Info Section -->
+
       <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
         <div class="info-container">
           
@@ -845,7 +869,7 @@
           </div>
       
 
-          <!-- Location -->
+
           <div class="info-card" data-aos="fade-up" data-aos-delay="300">
             <div class="info-icon">
               <i class="bi bi-geo-alt"></i>
@@ -857,7 +881,7 @@
             </div>
           </div>
 
-          <!-- Contact -->
+      
           <div class="info-card" data-aos="fade-up" data-aos-delay="400">
             <div class="info-icon">
               <i class="bi bi-telephone"></i>
@@ -869,7 +893,7 @@
             </div>
           </div>
 
-          <!-- Services -->
+         
           <div class="info-card" data-aos="fade-up" data-aos-delay="500">
             <div class="info-icon">
               <i class="bi bi-truck"></i>
@@ -885,7 +909,7 @@
             </div>
           </div>
 
-          <!-- CTA -->
+        
           <div class="cta-wrapper" data-aos="fade-up" data-aos-delay="600">
             <a href="#quote" class="btn-book">Request a Quote</a>
             <a href="#contact" class="btn-contact">Contact Support</a>
@@ -903,7 +927,7 @@
 
 <section id="why-us" class="events section light-background">
 
-  <!-- Section Title -->
+
   <div class="container section-title" data-aos="fade-up">
     <span class="description-title">Why Choose Us</span>
     <h2>Trusted Car Shipping Across the USA</h2>
@@ -912,10 +936,10 @@
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-    <!-- Highlight Feature Cards -->
+    
     <div class="row g-4 mb-5" data-aos="fade-up" data-aos-delay="200">
 
-      <!-- Insurance -->
+   
       <div class="col-lg-6" data-aos="slide-right" data-aos-delay="250">
         <div class="feature-card primary">
           <div class="feature-visual">
@@ -943,7 +967,7 @@
         </div>
       </div>
 
-      <!-- Door to Door -->
+      
       <div class="col-lg-6" data-aos="slide-left" data-aos-delay="300">
         <div class="feature-card secondary">
           <div class="feature-visual">
@@ -973,7 +997,7 @@
 
     </div>
 
-    <!-- Awards / Stats Section -->
+  
     <div class="awards-section" data-aos="fade-up" data-aos-delay="200">
       <div class="row align-items-center">
         <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="250">
@@ -985,7 +1009,7 @@
         <div class="col-lg-8" data-aos="fade-left" data-aos-delay="300">
           <div class="awards-grid">
             
-            <!-- Award Counter -->
+     
             <div class="award-item">
               <div class="award-icon"><i class="bi bi-car-front-fill"></i></div>
               <div class="award-details">
@@ -1031,7 +1055,7 @@
    
 <section id="gallery" class="menu section">
 
-  <!-- Section Title -->
+
   <div class="container section-title" data-aos="fade-up">
     <span class="description-title">Our Work</span>
     <h2>Car Shipment Gallery</h2>
@@ -1042,7 +1066,7 @@
 
     <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-      <!-- Filters -->
+  
       <div class="menu-filters isotope-filters mb-5" data-aos="fade-up" data-aos-delay="200">
         <ul>
           <li data-filter="*" class="filter-active">All</li>
@@ -1053,10 +1077,10 @@
         </ul>
       </div>
 
-      <!-- Gallery Grid -->
+      
       <div class="menu-grid isotope-container row gy-5" data-aos="fade-up" data-aos-delay="300">
 
-        <!-- Open Carrier -->
+      
         <div class="col-xl-4 col-lg-6 isotope-item filter-open">
           <div class="menu-card">
             <div class="menu-card-image">
@@ -1072,7 +1096,7 @@
           </div>
         </div>
 
-        <!-- Enclosed Carrier -->
+        
         <div class="col-xl-4 col-lg-6 isotope-item filter-enclosed">
           <div class="menu-card featured">
             <div class="menu-card-image">
@@ -1088,7 +1112,7 @@
           </div>
         </div>
 
-        <!-- Door Delivery -->
+      
         <div class="col-xl-4 col-lg-6 isotope-item filter-delivery">
           <div class="menu-card">
             <div class="menu-card-image">
@@ -1104,7 +1128,7 @@
           </div>
         </div>
 
-        <!-- Team -->
+   
         <div class="col-xl-4 col-lg-6 isotope-item filter-team">
           <div class="menu-card">
             <div class="menu-card-image">
@@ -1124,7 +1148,7 @@
 
     </div>
 
-    <!-- FAQ Section -->
+    
 <div class="menu-actions mt-5" data-aos="fade-up" data-aos-delay="400">
   <div class="faq-frame">
     <h3 class="mb-4">Frequently Asked Questions ❓</h3>
@@ -1176,97 +1200,16 @@
   </div>
 </div>
 
-<!-- Styles -->
+
 <style>
-  /* ✅ Single frame hi scrollable hoga aur background #f8efeb rakha */
-  .faq-frame {
-    border-radius: 16px;
-    padding: 25px;
-    background: #f8efeb; /* final background */
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
-    max-width: 700px;
-    margin: auto;
-    max-height: 320px;   /* fixed height */
-    overflow-y: auto;    /* scroll enable */
-  }
-
-  .faq-item {
-    margin-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .faq-question {
-    width: 100%;
-    background: none;
-    border: none;
-    outline: none;
-    text-align: left;
-    font-size: 16px;
-    font-weight: 600;
-    color: #222;
-    cursor: pointer;
-    padding: 10px 0;
-    transition: color 0.3s ease;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .faq-question:hover {
-    color: #007bff;
-  }
-
-  .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease, padding 0.3s ease;
-    color: #555;
-  }
-
-  .faq-item.active .faq-answer {
-    max-height: 200px;
-    padding: 5px 0 15px;
-  }
-
-  /* ✅ Modern custom scrollbar */
-  .faq-frame::-webkit-scrollbar {
-    width: 8px;
-  }
-  .faq-frame::-webkit-scrollbar-thumb {
-    background: #bbb;
-    border-radius: 10px;
-  }
-  .faq-frame::-webkit-scrollbar-thumb:hover {
-    background: #888;
-  }
-  .menu-actions {
-    background: #f8efeb; /* 🔴 Isko hata kar orange shade do */
-    background: #ffe5d1; /* ✅ Light orange color */
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0px 3px 8px rgba(0,0,0,0.05);
-  }
+  
+  
 </style>
 
 
 
-<!-- Accordion Script -->
-<script>
-  document.querySelectorAll(".faq-question").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const item = btn.parentElement;
-      const container = item.parentElement;
 
-      // Close others
-      container.querySelectorAll(".faq-item").forEach(f => {
-        if (f !== item) f.classList.remove("active");
-      });
 
-      // Toggle this one
-      item.classList.toggle("active");
-    });
-  });
-</script>
 
     
     <section id="contact" class="contact section light-background">
@@ -1398,7 +1341,7 @@
     <div class="container">
       <div class="row gy-5">
   
-        <!-- Company Info -->
+       
         <div class="col-lg-4">
           <div class="footer-content">
             <a href="index.html" class="logo d-flex align-items-center mb-4">
@@ -1406,7 +1349,7 @@
             </a>
             <p class="mb-4">Reliable and secure nationwide car shipping services. Whether you need to transport a single vehicle or a fleet, we ensure safe, on-time delivery every time.</p>
   
-            <!-- Newsletter -->
+           
             <div class="newsletter-form">
               <h5>Stay Updated</h5>
               <form action="forms/newsletter.php" method="post" class="php-email-form">
@@ -1424,7 +1367,7 @@
           </div>
         </div>
   
-        <!-- Quick Links -->
+   
         <div class="col-lg-2 col-6">
           <div class="footer-links">
             <h4>Company</h4>
@@ -1438,7 +1381,7 @@
           </div>
         </div>
   
-        <!-- Services -->
+
         <div class="col-lg-2 col-6">
           <div class="footer-links">
             <h4>Our Services</h4>
@@ -1452,7 +1395,7 @@
           </div>
         </div>
   
-        <!-- Contact -->
+        
         <div class="col-lg-4">
           <div class="footer-contact">
             <h4>Get in Touch</h4>
@@ -1491,7 +1434,7 @@
       </div>
     </div>
   
-    <!-- Footer Bottom -->
+    
     <div class="footer-bottom">
       <div class="container">
         <div class="row align-items-center">

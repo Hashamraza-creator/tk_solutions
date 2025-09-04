@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1400" width="1200" height="1400" role="img" aria-label="TK Transport Logo">
+  <title>TK Transport Logo (v2)</title>
+  <desc>Transparent-background SVG: orange TK, gray road with yellow stripe, white TRANSPORT wordmark on dark bar.</desc>
+  <defs>
+    <style type="text/css"><![CDATA[
+      .orange { fill: #F38B00; }
+      .dark { fill: #3A3E43; }
+      .yellow { fill: #F4C21F; }
+      .white { fill: #FFFFFF; }
+    ]]></style>
+  </defs>
+
+  <!-- TK letters (stylized block shapes) -->
+  <g id="TK" transform="translate(60,40) scale(1.05)">
+    <!-- T -->
+    <path class="orange" d="M40 80h720l-40 120h-200v360l-120 120V200H160z"/>
+    <!-- K -->
+    <path class="orange" d="M740 80h320l-280 240 260 220h-220l-160-140-80 60v-400z"/>
+  </g>
+
+  <!-- Road swoosh -->
+  <g id="road" transform="translate(60,360)">
+    <!-- dark road body -->
+    <path class="dark" d="M120 520 C360 280 720 220 1120 160 L1100 180 C740 240 420 360 180 600 L120 520 Z"/>
+    <!-- right-side orange filler for shape consistency -->
+    <path class="orange" d="M420 620 C580 460 800 360 1100 200 L1080 220 C820 360 620 470 460 640 L420 620 Z"/>
+    <!-- yellow center stripe -->
+    <path class="yellow" d="M320 560 C560 340 820 260 1100 200 L1108 195 C840 250 580 340 360 560 L320 560 Z"/>
+  </g>
+
+  <!-- TRANSPORT wordmark on a dark rounded bar -->
+  <g id="transport" transform="translate(60,920)">
+    <rect class="dark" x="0" y="0" rx="24" ry="24" width="1080" height="180"/>
+    <text x="540" y="125" text-anchor="middle"
+          font-family="Montserrat, Arial, Helvetica, sans-serif"
+          font-size="110" font-weight="800" class="white">TRANSPORT</text>
+  </g>
+</svg>

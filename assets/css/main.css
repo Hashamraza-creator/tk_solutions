@@ -1323,11 +1323,11 @@ section,
   font-size: 0.95rem;
 }
 
-.about .about-content .signature .chef-name {
-  font-weight: 600;
-  font-style: italic;
-  margin-bottom: 5px;
-}
+
+
+
+
+
 
 .about .about-content .signature img {
   max-width: 180px;
@@ -3588,4 +3588,71 @@ section,
 
 .award-details h4 .counter {
   color: #000 !important;
+}
+.faq-frame {
+  border-radius: 16px;
+  padding: 25px;
+  background: #f8efeb; 
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+  max-width: 700px;
+  margin: auto;
+  max-height: 320px;   
+  overflow-y: auto;    
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  cursor: pointer;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question:hover {
+  color: #007bff;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  color: #555;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 5px 0 15px;
+}
+
+/* ✅ Modern custom scrollbar */
+.faq-frame::-webkit-scrollbar {
+  width: 8px;
+}
+.faq-frame::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 10px;
+}
+.faq-frame::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+.menu-actions {
+  background: #f8efeb; /* 🔴 Isko hata kar orange shade do */
+  background: #ffe5d1; /* ✅ Light orange color */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.05);
 }
