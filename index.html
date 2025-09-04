@@ -56,46 +56,47 @@
         <a href="index.html" class="logo d-flex align-items-center">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- Inline SVG Logo -->
-<div style="max-width: 600px; margin: 0 auto; text-align: center;">
-  <?xml version="1.0" encoding="UTF-8"?>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1400" 
-       style="width: 100%; height: auto; max-width: 80px;" 
-       role="img" aria-label="TK Transport Logo">
-    <title>TK Transport Logo (v2)</title>
-    <desc>Transparent-background SVG: orange TK, gray road with yellow stripe, white TRANSPORT wordmark on dark bar.</desc>
-    <defs>
-      <style type="text/css">
-        .orange { fill: #F38B00; }
-        .dark { fill: #3A3E43; }
-        .yellow { fill: #F4C21F; }
-        .white { fill: #FFFFFF; }
-      </style>
-    </defs>
-
-    <!-- TK letters -->
-    <g id="TK" transform="translate(60,40) scale(1.05)">
-      <path class="orange" d="M40 80h720l-40 120h-200v360l-120 120V200H160z"/>
-      <path class="orange" d="M740 80h320l-280 240 260 220h-220l-160-140-80 60v-400z"/>
-    </g>
-
-    <!-- Road swoosh -->
-    <g id="road" transform="translate(60,360)">
-      <path class="dark" d="M120 520 C360 280 720 220 1120 160 L1100 180 C740 240 420 360 180 600 L120 520 Z"/>
-      <path class="orange" d="M420 620 C580 460 800 360 1100 200 L1080 220 C820 360 620 470 460 640 L420 620 Z"/>
-      <path class="yellow" d="M320 560 C560 340 820 260 1100 200 L1108 195 C840 250 580 340 360 560 L320 560 Z"/>
-    </g>
-
-    <!-- TRANSPORT wordmark -->
-    <g id="transport" transform="translate(60,920)">
-      <rect class="dark" x="0" y="0" rx="24" ry="24" width="1080" height="180"/>
-      <text x="540" y="125" text-anchor="middle"
-            font-family="Montserrat, Arial, Helvetica, sans-serif"
-            font-size="110" font-weight="800" class="white">TRANSPORT</text>
-    </g>
-  </svg>
-</div>
-
-     
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1400" width="60px" height="auto" role="img" aria-label="TK Transport Logo">
+            <title>TK Transport Logo (v2)</title>
+            <desc>Transparent-background SVG: orange TK, gray road with yellow stripe, white TRANSPORT wordmark on dark bar.</desc>
+            
+            <defs>
+              <style type="text/css">
+                .orange { fill: #F38B00; }
+                .dark { fill: #3A3E43; }
+                .yellow { fill: #F4C21F; }
+                .white { fill: #FFFFFF; }
+              </style>
+            </defs>
+          
+            <!-- TK letters -->
+            <g id="TK" transform="translate(60,40) scale(1.05)">
+              <path class="orange" d="M40 80h720l-40 120h-200v360l-120 120V200H160z"/>
+              <path class="orange" d="M740 80h320l-280 240 260 220h-220l-160-140-80 60v-400z"/>
+            </g>
+          
+            <!-- Road swoosh -->
+            <g id="road" transform="translate(60,360)">
+              <!-- dark road body (background first) -->
+              <path class="dark" d="M120 620 C380 360 720 280 1120 200 L1140 220 C760 300 440 440 200 700 Z"/>
+              
+              <!-- yellow center stripe -->
+              <path class="yellow" d="M300 600 C540 380 820 300 1100 240 L1110 230 C820 290 560 400 340 620 Z"/>
+              
+              <!-- orange accent overlay -->
+              <path class="orange" d="M420 640 C600 480 820 380 1100 260 L1120 280 C860 400 640 520 460 660 Z"/>
+            </g>
+          
+            <!-- TRANSPORT wordmark -->
+            <g id="transport" transform="translate(60,920)">
+              <rect class="dark" x="0" y="0" rx="24" ry="24" width="1080" height="180"/>
+              <text x="540" y="125" text-anchor="middle"
+                    font-family="Montserrat, Arial, Helvetica, sans-serif"
+                    font-size="110" font-weight="800" class="white">TRANSPORT</text>
+            </g>
+          </svg>
+          
           
         </a>
 
