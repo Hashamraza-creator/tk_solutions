@@ -181,6 +181,45 @@
     }
   });
 
+
+// counter animation
+
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll('.counter');
+
+  const animateCounter = (el) => {
+    const target = parseFloat(el.getAttribute('data-target'));
+    const decimals = parseInt(el.getAttribute('data-decimals')) || 0;
+    const duration = 1500;
+    const start = 0;
+    const startTime = performance.now();
+
+    function update(now) {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const value = start + (target - start) * progress;
+      el.textContent = value.toLocaleString(undefined, {
+        minimumFractionDigits: decimals,
+        maximumFractionDigits: decimals
+      });
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  };
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(counter => observer.observe(counter));
+});
+
+
+
   /**
    * Navmenu Scrollspy
    */

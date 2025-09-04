@@ -3583,3 +3583,9 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+
+
+.award-details h4 .counter {
+  color: #000 !important;
+}
