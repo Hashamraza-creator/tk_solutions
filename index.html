@@ -104,12 +104,12 @@
           <ul>
             <li><a href="#hero" class="active">Home</a></li>
             <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Our Services</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#quote">Get a Quote</a></li>
-            <li><a href="#reviews">Customer Reviews</a></li>
+            <li><a href="/services.html">Our Services</a></li>
+            <!-- <li><a href="#how-it-works">How It Works</a></li> -->
+            <li><a href="#contact">Get a Quote</a></li>
+            <li><a href="#testimonials">Customer Reviews</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <!-- <li><a href="#contact">Contact</a></li> -->
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -174,112 +174,131 @@
             </div>
           </div>
 
-          <div class="col-lg-4">
-            <div class="booking-card" data-aos="fade-left" data-aos-delay="200">
-              <h3>Book Your Car Shipment</h3>
-              <form action="forms/car-shipment.php" method="post" class="php-email-form">
-                <div class="row gy-3">
-          
-                  <!-- Name -->
-                  <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                  </div>
-          
-                  <!-- Email -->
-                  <div class="col-md-6">
-                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                  </div>
-          
-                  <!-- Phone -->
-                  <div class="col-md-6">
-                    <input type="tel" name="phone" class="form-control" placeholder="Your Phone" required>
-                  </div>
-          
-                  <!-- Pickup Location -->
-                  <div class="col-md-6">
-                    <input type="text" name="pickup" class="form-control" placeholder="Pickup Location" required>
-                  </div>
-          
-                  <!-- Drop-off Location -->
-                  <div class="col-md-6">
-                    <input type="text" name="dropoff" class="form-control" placeholder="Drop-off Location" required>
-                  </div>
-          
-                <!-- Vehicle Type -->
-<!-- Vehicle Type -->
-<!-- Vehicle Type -->
-<div class="col-md-6 position-relative">
-  <div class="position-relative">
-    <select name="vehicle_type" class="form-control custom-select text-secondary" required
-    onchange="this.classList.remove('text-secondary'); this.classList.add('text-white'); this.nextElementSibling.classList.add('text-white');">
-      <option value="" disabled selected >Vehicle Type</option>
-      <option value="Car">Car</option>
-      <option value="SUV">SUV</option>
-      <option value="Truck">Truck</option>
-      <option value="Van">Van</option>
-      <option value="RV">RV</option>
-    </select>
-    <i class="bi bi-caret-down-fill position-absolute top-50 end-0 translate-middle-y me-3 text-secondary"></i>
+         <!-- Booking Form -->
+<div class="col-lg-4">
+  <div class="booking-card" data-aos="fade-left" data-aos-delay="200">
+    <h3>Book Your Car Shipment</h3>
+    
+    <form id="car-shipment-form" class="php-email-form">
+      <div class="row gy-3">
+
+        <!-- Name -->
+        <div class="col-md-6">
+          <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-6">
+          <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+        </div>
+
+        <!-- Phone -->
+        <div class="col-md-6">
+          <input type="tel" name="phone" class="form-control" placeholder="Your Phone" required>
+        </div>
+
+        <!-- Pickup Location -->
+        <div class="col-md-6">
+          <input type="text" name="pickup" class="form-control" placeholder="Pickup Location" required>
+        </div>
+
+        <!-- Drop-off Location -->
+        <div class="col-md-6">
+          <input type="text" name="dropoff" class="form-control" placeholder="Drop-off Location" required>
+        </div>
+
+        <!-- Vehicle Type -->
+        <div class="col-md-6 position-relative">
+          <div class="position-relative">
+            <select name="vehicle_type" class="form-control custom-select text-secondary" required
+              onchange="this.classList.remove('text-secondary'); this.classList.add('text-dark'); this.nextElementSibling.classList.add('text-dark');">
+              <option value="" disabled selected>Vehicle Type</option>
+              <option value="Car">Car</option>
+              <option value="SUV">SUV</option>
+              <option value="Truck">Truck</option>
+              <option value="Van">Van</option>
+              <option value="RV">RV</option>
+            </select>
+            <i class="bi bi-caret-down-fill position-absolute top-50 end-0 translate-middle-y me-3 text-secondary"></i>
+          </div>
+        </div>
+
+        <!-- Car Make -->
+        <div class="col-md-6">
+          <input type="text" name="car_make" class="form-control" placeholder="Make" required>
+        </div>
+
+        <!-- Car Model -->
+        <div class="col-md-6">
+          <input type="text" name="car_model" class="form-control" placeholder="Model" required>
+        </div>
+
+        <!-- Car Year -->
+        <div class="col-md-6">
+          <input type="number" name="car_year" class="form-control" placeholder="Year" min="1900" max="2099" required>
+        </div>
+
+        <!-- Vehicle Condition -->
+        <div class="col-md-6 position-relative">
+          <select name="vehicle_condition" class="form-control custom-select pe-5 text-secondary" required
+                  onchange="this.classList.remove('text-secondary'); this.classList.add('text-dark'); this.nextElementSibling.classList.add('text-dark');">
+            <option value="" disabled selected hidden>Condition</option>
+            <option value="Operable">Operable</option>
+            <option value="Inoperable">Inoperable</option>
+          </select>
+          <i class="bi bi-caret-down-fill position-absolute top-50 end-0 translate-middle-y me-3 text-secondary"></i>
+        </div>
+
+        <!-- Additional Notes -->
+        <div class="col-12">
+          <textarea name="message" class="form-control" rows="3" placeholder="Any special instructions (e.g., fragile, urgent)"></textarea>
+        </div>
+
+        <!-- Submit -->
+        <div class="col-12">
+          <div class="loading">Loading</div>
+          <div class="error-message"></div>
+          <div class="sent-message">Your shipment request has been sent. We'll contact you shortly!</div>
+          <button type="submit" class="btn btn-primary w-100">Book Shipment</button>
+        </div>
+      </div>
+    </form>
   </div>
 </div>
 
+<!-- EmailJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("1rpV3mNkWab1waogJ"); // Replace with your EmailJS Public Key
+  })();
 
+  document.getElementById("car-shipment-form").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-                  
-          
-                  <!-- Car Make -->
-                  <div class="col-md-6">
-                    <input type="text" name="car_make" class="form-control" placeholder="Make" required>
-                  </div>
-          
-                  <!-- Car Model -->
-                  <div class="col-md-6">
-                    <input type="text" name="car_model" class="form-control" placeholder="Model" required>
-                  </div>
-          
-                  <!-- Car Year -->
-                  <div class="col-md-6">
-                    <input type="number" name="car_year" class="form-control" placeholder="Year" min="1900" max="2099" required>
-                  </div>
-          
-                <!-- Vehicle Condition -->
-                <div class="col-md-6 position-relative">
-                  <select name="vehicle_condition" class="form-control custom-select pe-5 text-secondary" required
-                          onchange="this.classList.remove('text-secondary'); this.classList.add('text-white'); this.nextElementSibling.classList.add('text-white');">
-                    <option value="" disabled selected hidden>Condition</option>
-                    <option value="Operable">Operable</option>
-                    <option value="Inoperable">Inoperable</option>
-                  </select>
-                  <i class="bi bi-caret-down-fill position-absolute top-50 end-0 translate-middle-y me-3 text-secondary"></i>
-                </div>
-                
+    emailjs.sendForm("service_jaslj1r", "template_c3ebn3p", this)
+      .then(function(response) {
+        document.querySelector(".sent-message").style.display = "block";
+        document.querySelector(".error-message").style.display = "none";
+      }, function(error) {
+        document.querySelector(".error-message").innerHTML = "Error: " + JSON.stringify(error);
+        document.querySelector(".error-message").style.display = "block";
+      });
+  });
+</script>
 
-                  <!-- Additional Notes -->
-                  <div class="col-12">
-                    <textarea name="message" class="form-control" rows="3" placeholder="Any special instructions (e.g., fragile, urgent)"></textarea>
-                  </div>
           
-                  <!-- Submit -->
-                  <div class="col-12">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your shipment request has been sent. We'll contact you shortly!</div>
-                    <button type="submit" class="btn btn-primary w-100">Book Shipment</button>
-                  </div>
-                </div>
-              </form>
-            </div>
+      
+        <!-- Booking form and other content -->
+      
+        <!-- <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="400">
+          <div class="scroll-text">Scroll to Explore</div>
+          <div class="scroll-arrow">
+            <i class="bi bi-chevron-down"></i>
           </div>
-          </div>
-          </div>
-          
-      <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="400">
-        <div class="scroll-text">Scroll to Explore</div>
-        <div class="scroll-arrow">
-          <i class="bi bi-chevron-down"></i>
         </div>
-      </div>
-
+      -->
+      
     </section><!-- /Hero Section -->
 
 
@@ -783,56 +802,57 @@
         <div class="state-grid">
 
       
-          <a href="alabama-car-shipping" class="state-box">Alabama Car Shipping</a>
-          <a href="alaska-car-shipping" class="state-box">Alaska Car Shipping</a>
-          <a href="arizona-car-shipping" class="state-box">Arizona Car Shipping </a>
-          <a href="arkansas-car-shipping" class="state-box">Arkansas Car Shipping</a>
-          <a href="california-car-shipping" class="state-box ">California Car Shipping </a>
-          <a href="colorado-car-shipping" class="state-box">Colorado Car Shipping</a>
-          <a href="connecticut-car-shipping" class="state-box">Connecticut Car Shipping</a>
-          <a href="delaware-car-shipping" class="state-box">Delaware Car Shipping</a>
-          <a href="florida-car-shipping" class="state-box">Florida Car Shipping </a>
-          <a href="georgia-car-shipping" class="state-box">Georgia Car Shipping</a>
-          <a href="hawaii-car-shipping" class="state-box">Hawaii Car Shipping</a>
-          <a href="idaho-car-shipping" class="state-box">Idaho Car Shipping</a>
-          <a href="illinois-car-shipping" class="state-box">Illinois Car Shipping</a>
-          <a href="indiana-car-shipping" class="state-box">Indiana Car Shipping</a>
-          <a href="iowa-car-shipping" class="state-box">Iowa Car Shipping</a>
-          <a href="kansas-car-shipping" class="state-box">Kansas Car Shipping</a>
-          <a href="kentucky-car-shipping" class="state-box">Kentucky Car Shipping</a>
-          <a href="louisiana-car-shipping" class="state-box">Louisiana Car Shipping</a>
-          <a href="maine-car-shipping" class="state-box">Maine Car Shipping</a>
-          <a href="maryland-car-shipping" class="state-box">Maryland Car Shipping</a>
-          <a href="massachusetts-car-shipping" class="state-box">Massachusetts Car Shipping</a>
-          <a href="michigan-car-shipping" class="state-box">Michigan Car Shipping</a>
-          <a href="minnesota-car-shipping" class="state-box">Minnesota Car Shipping</a>
-          <a href="mississippi-car-shipping" class="state-box">Mississippi Car Shipping</a>
-          <a href="missouri-car-shipping" class="state-box">Missouri Car Shipping</a>
-          <a href="montana-car-shipping" class="state-box">Montana Car Shipping</a>
-          <a href="nebraska-car-shipping" class="state-box">Nebraska Car Shipping</a>
-          <a href="nevada-car-shipping" class="state-box">Nevada Car Shipping </a>
-          <a href="new-hampshire-car-shipping" class="state-box">New Hampshire Car Shipping</a>
-          <a href="new-jersey-car-shipping" class="state-box">New Jersey Car Shipping</a>
-          <a href="new-mexico-car-shipping" class="state-box">New Mexico Car Shipping</a>
-          <a href="new-york-car-shipping" class="state-box">New York Car Shipping</a>
-          <a href="north-carolina-car-shipping" class="state-box ">North Carolina Car Shipping </a>
-          <a href="north-dakota-car-shipping" class="state-box">North Dakota Car Shipping</a>
-          <a href="ohio-car-shipping" class="state-box">Ohio Car Shipping</a>
-          <a href="oklahoma-car-shipping" class="state-box">Oklahoma Car Shipping</a>
-          <a href="oregon-car-shipping" class="state-box">Oregon Car Shipping</a>
-          <a href="pennsylvania-car-shipping" class="state-box">Pennsylvania Car Shipping</a>
-          <a href="rhode-island-car-shipping" class="state-box">Rhode Island Car Shipping</a>
-          <a href="south-carolina-car-shipping" class="state-box">South Carolina Car Shipping</a>
-          <a href="south-dakota-car-shipping" class="state-box">South Dakota Car Shipping</a>
-          <a href="tennessee-car-shipping" class="state-box">Tennessee Car Shipping</a>
-          <a href="texas-car-shipping" class="state-box">Texas Car Shipping </a>
-          <a href="utah-car-shipping" class="state-box">Utah Car Shipping</a>
-          <a href="vermont-car-shipping" class="state-box">Vermont Car Shipping</a>
-          <a href="virginia-car-shipping" class="state-box">Virginia Car Shipping</a>
-          <a href="washington-car-shipping" class="state-box">Washington Car Shipping</a>
-          <a href="west-virginia-car-shipping" class="state-box">West Virginia Car Shipping</a>
-          <a href="wisconsin-car-shipping" class="state-box">Wisconsin Car Shipping</a>
-          <a href="wyoming-car-shipping" class="state-box">Wyoming Car Shipping</a>
+          <a href="/shipping.html" class="state-box">Alabama Car Shipping</a>
+<a href="/shipping.html" class="state-box">Alaska Car Shipping</a>
+<a href="/shipping.html" class="state-box">Arizona Car Shipping</a>
+<a href="/shipping.html" class="state-box">Arkansas Car Shipping</a>
+<a href="/shipping.html" class="state-box">California Car Shipping</a>
+<a href="/shipping.html" class="state-box">Colorado Car Shipping</a>
+<a href="/shipping.html" class="state-box">Connecticut Car Shipping</a>
+<a href="/shipping.html" class="state-box">Delaware Car Shipping</a>
+<a href="/shipping.html" class="state-box">Florida Car Shipping</a>
+<a href="/shipping.html" class="state-box">Georgia Car Shipping</a>
+<a href="/shipping.html" class="state-box">Hawaii Car Shipping</a>
+<a href="/shipping.html" class="state-box">Idaho Car Shipping</a>
+<a href="/shipping.html" class="state-box">Illinois Car Shipping</a>
+<a href="/shipping.html" class="state-box">Indiana Car Shipping</a>
+<a href="/shipping.html" class="state-box">Iowa Car Shipping</a>
+<a href="/shipping.html" class="state-box">Kansas Car Shipping</a>
+<a href="/shipping.html" class="state-box">Kentucky Car Shipping</a>
+<a href="/shipping.html" class="state-box">Louisiana Car Shipping</a>
+<a href="/shipping.html" class="state-box">Maine Car Shipping</a>
+<a href="/shipping.html" class="state-box">Maryland Car Shipping</a>
+<a href="/shipping.html" class="state-box">Massachusetts Car Shipping</a>
+<a href="/shipping.html" class="state-box">Michigan Car Shipping</a>
+<a href="/shipping.html" class="state-box">Minnesota Car Shipping</a>
+<a href="/shipping.html" class="state-box">Mississippi Car Shipping</a>
+<a href="/shipping.html" class="state-box">Missouri Car Shipping</a>
+<a href="/shipping.html" class="state-box">Montana Car Shipping</a>
+<a href="/shipping.html" class="state-box">Nebraska Car Shipping</a>
+<a href="/shipping.html" class="state-box">Nevada Car Shipping</a>
+<a href="/shipping.html" class="state-box">New Hampshire Car Shipping</a>
+<a href="/shipping.html" class="state-box">New Jersey Car Shipping</a>
+<a href="/shipping.html" class="state-box">New Mexico Car Shipping</a>
+<a href="/shipping.html" class="state-box">New York Car Shipping</a>
+<a href="/shipping.html" class="state-box">North Carolina Car Shipping</a>
+<a href="/shipping.html" class="state-box">North Dakota Car Shipping</a>
+<a href="/shipping.html" class="state-box">Ohio Car Shipping</a>
+<a href="/shipping.html" class="state-box">Oklahoma Car Shipping</a>
+<a href="/shipping.html" class="state-box">Oregon Car Shipping</a>
+<a href="/shipping.html" class="state-box">Pennsylvania Car Shipping</a>
+<a href="/shipping.html" class="state-box">Rhode Island Car Shipping</a>
+<a href="/shipping.html" class="state-box">South Carolina Car Shipping</a>
+<a href="/shipping.html" class="state-box">South Dakota Car Shipping</a>
+<a href="/shipping.html" class="state-box">Tennessee Car Shipping</a>
+<a href="/shipping.html" class="state-box">Texas Car Shipping</a>
+<a href="/shipping.html" class="state-box">Utah Car Shipping</a>
+<a href="/shipping.html" class="state-box">Vermont Car Shipping</a>
+<a href="/shipping.html" class="state-box">Virginia Car Shipping</a>
+<a href="/shipping.html" class="state-box">Washington Car Shipping</a>
+<a href="/shipping.html" class="state-box">West Virginia Car Shipping</a>
+<a href="/shipping.html" class="state-box">Wisconsin Car Shipping</a>
+<a href="/shipping.html" class="state-box">Wyoming Car Shipping</a>
+
 
         </div>
       </div>
@@ -1149,7 +1169,7 @@
 
     </div>
 
-    
+    <section id="faq" class="menu section">
 <div class="menu-actions mt-5" data-aos="fade-up" data-aos-delay="400">
   <div class="faq-frame">
     <h3 class="mb-4">Frequently Asked Questions ❓</h3>
@@ -1202,11 +1222,7 @@
 </div>
 
 
-<style>
-  
-  
-</style>
-
+</section>
 
 
 
