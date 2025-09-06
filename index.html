@@ -103,11 +103,11 @@
         <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="#hero" class="active">Home</a></li>
-            <li><a href="#about">About Us</a></li>
+            <li><a href="/about.html">About Us</a></li>
             <li><a href="/services.html">Our Services</a></li>
             <!-- <li><a href="#how-it-works">How It Works</a></li> -->
-            <li><a href="#contact">Get a Quote</a></li>
-            <li><a href="#testimonials">Customer Reviews</a></li>
+            <li><a href="/get-a-quaote.html">Get a Quote</a></li>
+            <li><a href="#testimonials">Contract</a></li>
             <li><a href="#faq">FAQ</a></li>
             <!-- <li><a href="#contact">Contact</a></li> -->
           </ul>
@@ -211,7 +211,7 @@
         <div class="col-md-6 position-relative">
           <div class="position-relative">
             <select name="vehicle_type" class="form-control custom-select text-secondary" required
-              onchange="this.classList.remove('text-secondary'); this.classList.add('text-dark'); this.nextElementSibling.classList.add('text-dark');">
+              onchange="this.classList.remove('text-secondary'); this.classList.add('text-white'); this.nextElementSibling.classList.add('text-dark');">
               <option value="" disabled selected>Vehicle Type</option>
               <option value="Car">Car</option>
               <option value="SUV">SUV</option>
@@ -241,7 +241,7 @@
         <!-- Vehicle Condition -->
         <div class="col-md-6 position-relative">
           <select name="vehicle_condition" class="form-control custom-select pe-5 text-secondary" required
-                  onchange="this.classList.remove('text-secondary'); this.classList.add('text-dark'); this.nextElementSibling.classList.add('text-dark');">
+                  onchange="this.classList.remove('text-secondary'); this.classList.add('text-white'); this.nextElementSibling.classList.add('text-white');">
             <option value="" disabled selected hidden>Condition</option>
             <option value="Operable">Operable</option>
             <option value="Inoperable">Inoperable</option>
@@ -400,86 +400,98 @@
     
             <!-- Open Hauler -->
             <div class="col-xl-4 col-lg-6 isotope-item filter-starters">
-              <div class="menu-card">
-                <div class="menu-card-image">
-                  <img src="assets/img/open-hauler.webp" alt="Open Hauler" class="img-fluid">
-                  <div class="price-overlay">Most Affordable</div>
+              <a href="/open-hauler.html" class="text-decoration-none text-dark">
+                <div class="menu-card">
+                  <div class="menu-card-image">
+                    <img src="assets/img/open-hauler.webp" alt="Open Hauler" class="img-fluid">
+                    <div class="price-overlay">Most Affordable</div>
+                  </div>
+                  <div class="menu-card-content">
+                    <h4>Open Hauler</h4>
+                    <p>Cost-effective nationwide transport using open carriers, ideal for standard cars.</p>
+                  </div>
                 </div>
-                <div class="menu-card-content">
-                  <h4>Open Hauler</h4>
-                  <p>Cost-effective nationwide transport using open carriers, ideal for standard cars.</p>
-                </div>
-              </div>
+              </a>
             </div>
     
             <!-- Enclosed Transport -->
             <div class="col-xl-4 col-lg-6 isotope-item filter-main">
-              <div class="menu-card featured">
-                <div class="menu-card-image">
-                  <img src="assets/img/enclosed_hauler.webp" alt="Enclosed Transport" class="img-fluid">
-                  <div class="price-overlay">Premium Protection</div>
+              <a href="/enclosed.html" class="text-decoration-none text-dark">
+                <div class="menu-card featured">
+                  <div class="menu-card-image">
+                    <img src="assets/img/enclosed_hauler.webp" alt="Enclosed Transport" class="img-fluid">
+                    <div class="price-overlay">Premium Protection</div>
+                  </div>
+                  <div class="menu-card-content">
+                    <h4>Enclosed Transport</h4>
+                    <p>Provides maximum protection from weather and road debris. Best for luxury, classic, or exotic cars.</p>
+                  </div>
                 </div>
-                <div class="menu-card-content">
-                  <h4>Enclosed Transport</h4>
-                  <p>Provides maximum protection from weather and road debris. Best for luxury, classic, or exotic cars.</p>
-                </div>
-              </div>
+              </a>
             </div>
     
             <!-- Door to Door -->
             <div class="col-xl-4 col-lg-6 isotope-item filter-dessert">
-              <div class="menu-card">
-                <div class="menu-card-image">
-                  <img src="assets/img/door-to-door.jpg" alt="Door to Door" class="img-fluid">
-                  <div class="price-overlay">Convenient</div>
+              <a href="/door-to-door.html" class="text-decoration-none text-dark">
+                <div class="menu-card">
+                  <div class="menu-card-image">
+                    <img src="assets/img/door-to-door.jpg" alt="Door to Door" class="img-fluid">
+                    <div class="price-overlay">Convenient</div>
+                  </div>
+                  <div class="menu-card-content">
+                    <h4>Door to Door Transport</h4>
+                    <p>We pick up and deliver your vehicle directly to your addresses, no terminals needed.</p>
+                  </div>
                 </div>
-                <div class="menu-card-content">
-                  <h4>Door to Door Transport</h4>
-                  <p>We pick up and deliver your vehicle directly to your addresses, no terminals needed.</p>
-                </div>
-              </div>
+              </a>
             </div>
     
             <!-- Port to Port -->
             <div class="col-xl-4 col-lg-6 isotope-item filter-drinks">
-              <div class="menu-card">
-                <div class="menu-card-image">
-                  <img src="assets/img/port-to-port.jpg" alt="Port to Port" class="img-fluid">
-                  <div class="price-overlay">Nationwide & International</div>
+              <a href="/port-to-port.html" class="text-decoration-none text-dark">
+                <div class="menu-card">
+                  <div class="menu-card-image">
+                    <img src="assets/img/port-to-port.jpg" alt="Port to Port" class="img-fluid">
+                    <div class="price-overlay">Nationwide & International</div>
+                  </div>
+                  <div class="menu-card-content">
+                    <h4>Port to Port Shipping</h4>
+                    <p>For international moves, drop off and pick up your vehicle at designated shipping ports.</p>
+                  </div>
                 </div>
-                <div class="menu-card-content">
-                  <h4>Port to Port Shipping</h4>
-                  <p>For international moves, drop off and pick up your vehicle at designated shipping ports.</p>
-                </div>
-              </div>
+              </a>
             </div>
     
             <!-- Inoperable Vehicle Transport -->
             <div class="col-xl-4 col-lg-6 isotope-item filter-inoperatable">
-              <div class="menu-card">
-                <div class="menu-card-image">
-                  <img src="assets/img/inoperateable.jpeg" alt="Inoperable Vehicle Transport" class="img-fluid">
-                  <div class="price-overlay">Special Handling</div>
+              <a href="/inoperatable.html" class="text-decoration-none text-dark">
+                <div class="menu-card">
+                  <div class="menu-card-image">
+                    <img src="assets/img/inoperateable.jpeg" alt="Inoperable Vehicle Transport" class="img-fluid">
+                    <div class="price-overlay">Special Handling</div>
+                  </div>
+                  <div class="menu-card-content">
+                    <h4>Inoperable Transport</h4>
+                    <p>Safe and professional handling for vehicles that don’t run, using special equipment.</p>
+                  </div>
                 </div>
-                <div class="menu-card-content">
-                  <h4>Inoperable Transport</h4>
-                  <p>Safe and professional handling for vehicles that don’t run, using special equipment.</p>
-                </div>
-              </div>
+              </a>
             </div>
     
             <!-- Expedited Shipping -->
             <div class="col-xl-4 col-lg-6 isotope-item filter-expedited">
-              <div class="menu-card">
-                <div class="menu-card-image">
-                  <img src="assets/img/expited-car.webp" alt="Expedited Shipping" class="img-fluid">
-                  <div class="price-overlay">Fast Delivery</div>
+              <a href="/expidited.html" class="text-decoration-none text-dark">
+                <div class="menu-card">
+                  <div class="menu-card-image">
+                    <img src="assets/img/expited-car.webp" alt="Expedited Shipping" class="img-fluid">
+                    <div class="price-overlay">Fast Delivery</div>
+                  </div>
+                  <div class="menu-card-content">
+                    <h4>Expedited Shipping</h4>
+                    <p>When time is critical, we arrange express delivery with the fastest available carriers.</p>
+                  </div>
                 </div>
-                <div class="menu-card-content">
-                  <h4>Expedited Shipping</h4>
-                  <p>When time is critical, we arrange express delivery with the fastest available carriers.</p>
-                </div>
-              </div>
+              </a>
             </div>
     
           </div>
@@ -873,7 +885,7 @@
       <!-- Map -->
       <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
         <div class="map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.684949335945!2d-73.98658242357565!3d40.75853057126168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ1JzMwLjciTiA3M8KwNTknMDcuNyJX!5e0!3m2!1sen!2sus!4v1654321234567!5m2!1sen!2sus" 
+          <iframe src="/assets/img/ship.webp" 
                   width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" 
                   referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>

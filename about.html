@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | TK Transport Solutions</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- AOS Animation -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="/assets/css/main.css" rel="stylesheet">
+  <script src="assets/js/main.js"></script>
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #0d0d0d;
+      color: #f8f9fa;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("assets/img/closed\ truck.jpg") center/cover no-repeat;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #f38b00;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #eaeaea;
+    }
+
+    .about-section .years-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #f38b00;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .feature-item i {
+      font-size: 2rem;
+      color: #f38b00;
+    }
+
+    .stats {
+      background: #111;
+      padding: 50px 0;
+    }
+
+    .stats .stat-box {
+      text-align: center;
+      color: #fff;
+    }
+
+    .stats .stat-box h2 {
+      font-size: 2.5rem;
+      color: #f38b00;
+    }
+
+    .testimonials {
+      background: #1a1a1a;
+      padding: 60px 0;
+    }
+
+    .testimonial {
+      background: #222;
+      border-radius: 10px;
+      padding: 20px;
+      color: #eaeaea;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #f38b00, #ffb84d);
+      color: #000;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .cta .btn {
+      background: #000;
+      color: #f38b00;
+      font-weight: bold;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 50px;
+    }
+
+    .cta .btn:hover {
+      background: #222;
+    }
+  </style>
+</head>
+
+<header id="header" class="header fixed-top">
+  <div class="topbar d-flex align-items-center dark-background">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">TKsolutions@gmail.com</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 2342 2323 2323</span></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="branding d-flex align-items-cente">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- SVG Logo -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1400" width="60px" height="auto" role="img" aria-label="TK Transport Logo">
+          <defs>
+            <style type="text/css">
+              .orange { fill: #F38B00; }
+              .dark { fill: #3A3E43; }
+              .yellow { fill: #F4C21F; }
+              .white { fill: #FFFFFF; }
+            </style>
+          </defs>
+          <g id="TK" transform="translate(60,40) scale(1.05)">
+            <path class="orange" d="M40 80h720l-40 120h-200v360l-120 120V200H160z"/>
+            <path class="orange" d="M740 80h320l-280 240 260 220h-220l-160-140-80 60v-400z"/>
+          </g>
+          <g id="road" transform="translate(60,360)">
+            <path class="dark" d="M120 620 C380 360 720 280 1120 200 L1140 220 C760 300 440 440 200 700 Z"/>
+            <path class="yellow" d="M300 600 C540 380 820 300 1100 240 L1110 230 C820 290 560 400 340 620 Z"/>
+            <path class="orange" d="M420 640 C600 480 820 380 1100 260 L1120 280 C860 400 640 520 460 660 Z"/>
+          </g>
+          <g id="transport" transform="translate(60,920)">
+            <rect class="dark" x="0" y="0" rx="24" ry="24" width="1080" height="180"/>
+            <text x="540" y="125" text-anchor="middle"
+              font-family="Montserrat, Arial, Helvetica, sans-serif"
+              font-size="110" font-weight="800" class="white">TRANSPORT</text>
+          </g>
+        </svg>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html" class="active">About Us</a></li>
+          <li><a href="/services.html">Our Services</a></li>
+          <li><a href="/get-a-quaote.html">Get a Quote</a></li>
+          <li><a href="#testimonials">Contract</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container" data-aos="fade-up">
+      <h1>About TK Transport Solutions</h1>
+      <p>Luxury. Reliability. Excellence. Redefining the way vehicles move across the nation.</p>
+    </div>
+  </section>
+
+  <!-- About Section (renamed to avoid conflicts) -->
+  <section id="about-section" class="about-section section py-5">
+    <div class="container section-title text-center mb-5" data-aos="fade-up">
+      <span class="description-title fw-bold" >&nbsp;About us</span>
+      <h2 class="display-5 fw-bold " style="color: #ffb84d;" >Driven by Excellence</h2>
+      <p class="text-dark fs-5" style="color: #ffb84d;">Let us put our 18+ years of experience to work for you!</p>
+    </div>
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row g-5 align-items-center">
+
+        <!-- Content -->
+        <div class="col-lg-6" data-aos="fade-right">
+          <h2 class="fw-bold mb-4" style="color: #ffb84d;">Experience Our Unique Approach</h2>
+          <p class="fst-italic fs-5">At <strong>TK Transport Solutions</strong>, we redefine car shipping — making it <span
+              class="text-warning">fast</span>, <span class="text-warning">safe</span>, and <span
+              class="text-warning">cost-effective</span>.</p>
+          <p class="mb-4">We are a leading nationwide provider of door-to-door auto transport. From luxury vehicles to
+            RVs, our professional team ensures every shipment is handled with care, precision, and reliability.</p>
+
+          <div class="row mt-4">
+            <div class="col-md-6 mb-4">
+              <div class="feature-item d-flex align-items-start">
+                <i class="bi bi-truck me-3"></i>
+                <div>
+                  <h4 class="fw-bold text-dark mb-1">Open & Enclosed Shipments</h4>
+                  <p class="small">Choose the right protection for your vehicle.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="feature-item d-flex align-items-start">
+                <i class="bi bi-cash-coin me-3"></i>
+                <div>
+                  <h4 class="fw-bold text-dark mb-1">Affordable Pricing</h4>
+                  <p class="small">Premium service without the premium cost.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery -->
+        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+          <div class="about-gallery position-relative">
+            <div class="row g-3">
+              <div class="col-6">
+                <img src="assets/img/open truck.webp" class="img-fluid rounded shadow-lg" alt="Open Car Carrier">
+              </div>
+              <div class="col-6">
+                <img src="assets/img/closed truck.jpg" class="img-fluid rounded shadow-lg" alt="Enclosed Car Carrier">
+              </div>
+              <div class="col-12 mt-3 position-relative">
+                <div class="years-badge shadow-lg">
+                  <span class="number display-6">18+</span>
+                  <span class="text">Years of Excellence</span>
+                </div>
+                <img src="assets/img/rv truck.webp" class="img-fluid rounded shadow-lg" alt="RV Transport">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-3 stat-box" data-aos="fade-up">
+          <h2>18+</h2>
+          <p>Years in Business</p>
+        </div>
+        <div class="col-md-3 stat-box" data-aos="fade-up" data-aos-delay="100">
+          <h2>10k+</h2>
+          <p>Vehicles Shipped</p>
+        </div>
+        <div class="col-md-3 stat-box" data-aos="fade-up" data-aos-delay="200">
+          <h2>98%</h2>
+          <p>Customer Satisfaction</p>
+        </div>
+        <div class="col-md-3 stat-box" data-aos="fade-up" data-aos-delay="300">
+          <h2>50+</h2>
+          <p>States Covered</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-5" style="color:#F38B00;">What Our Clients Say</h2>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="testimonial" data-aos="fade-up">
+            <p>"TK Transport made shipping my luxury car across states seamless. Safe, fast, and professional."</p>
+            <h6>- Sarah J.</h6>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial" data-aos="fade-up" data-aos-delay="150">
+            <p>"Affordable pricing without compromising quality. I’ll definitely use their service again!"</p>
+            <h6>- Mark R.</h6>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial" data-aos="fade-up" data-aos-delay="300">
+            <p>"Highly recommend TK Transport Solutions. They handled my SUV with great care."</p>
+            <h6>- Emily W.</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Ship Your Car?</h2>
+      <p>Let TK Transport Solutions handle your vehicle with the luxury treatment it deserves.</p>
+      <a href="/get-a-quaote.html" class="btn mt-3">Get a Free Quote</a>
+    </div>
+  </section>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a Quote | TK Transport Solutions</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="/assets/js/main.js"></script>
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    .page-header {
+      background: linear-gradient(rgba(247, 164, 56, 0.6), rgba(237, 133, 5, 0.6)),
+        url("assets/img/quote-bg.jpg") center/cover no-repeat;
+      color: #fff;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #F38B00;
+    }
+
+    .quote-section {
+      padding: 80px 0;
+    }
+
+    .quote-form {
+      background: #fff;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .btn-orange {
+      background-color: #F38B00;
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 30px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-orange:hover {
+      background-color: #d37600;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header" class="header fixed-top">
+    <div class="topbar d-flex align-items-center dark-background">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">TKsolutions@gmail.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 2342 2323 2323</span></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="branding d-flex align-items-cente">
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Inline SVG Logo -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1400" width="60px" height="auto" role="img" aria-label="TK Transport Logo">
+            <defs>
+              <style type="text/css">
+                .orange { fill: #F38B00; }
+                .dark { fill: #3A3E43; }
+                .yellow { fill: #F4C21F; }
+                .white { fill: #FFFFFF; }
+              </style>
+            </defs>
+            <g id="TK" transform="translate(60,40) scale(1.05)">
+              <path class="orange" d="M40 80h720l-40 120h-200v360l-120 120V200H160z"/>
+              <path class="orange" d="M740 80h320l-280 240 260 220h-220l-160-140-80 60v-400z"/>
+            </g>
+            <g id="road" transform="translate(60,360)">
+              <path class="dark" d="M120 620 C380 360 720 280 1120 200 L1140 220 C760 300 440 440 200 700 Z"/>
+              <path class="yellow" d="M300 600 C540 380 820 300 1100 240 L1110 230 C820 290 560 400 340 620 Z"/>
+              <path class="orange" d="M420 640 C600 480 820 380 1100 260 L1120 280 C860 400 640 520 460 660 Z"/>
+            </g>
+            <g id="transport" transform="translate(60,920)">
+              <rect class="dark" x="0" y="0" rx="24" ry="24" width="1080" height="180"/>
+              <text x="540" y="125" text-anchor="middle"
+                font-family="Montserrat, Arial, Helvetica, sans-serif"
+                font-size="110" font-weight="800" class="white">TRANSPORT</text>
+            </g>
+          </svg>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" >Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/services.html">Our Services</a></li>
+            <li><a href="/get-a-quaote.html" class="active">Get a Quote</a></li>
+            <li><a href="#testimonials">Contract</a></li>
+            <li><a href="/index.html">FAQ</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- Hero Section -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Get a Quote</h1>
+      <p class="lead">Fill out the form below and we’ll provide you with a customized shipping estimate.</p>
+    </div>
+  </section>
+
+  <!-- Quote Form Section -->
+  <section class="quote-section">
+    <div class="container">
+      <div class="quote-form">
+        <form action="submit-quote.php" method="POST">
+          <div class="row g-4">
+            <!-- Personal Info -->
+            <div class="col-md-6">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control" name="name" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" name="email" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Phone</label>
+              <input type="text" class="form-control" name="phone" required>
+            </div>
+
+            <!-- Vehicle Info -->
+            <div class="col-md-6">
+              <label class="form-label">Car Make</label>
+              <input type="text" class="form-control" name="car_make" placeholder="e.g., Toyota" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Car Model</label>
+              <input type="text" class="form-control" name="car_model" placeholder="e.g., Corolla" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Car Year</label>
+              <input type="number" class="form-control" name="car_year" placeholder="e.g., 2022" min="1900" max="2025" required>
+            </div>
+
+            <!-- Pickup & Delivery -->
+            <div class="col-md-6">
+              <label class="form-label">Pickup Location</label>
+              <input type="text" class="form-control" name="pickup" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Delivery Location</label>
+              <input type="text" class="form-control" name="delivery" required>
+            </div>
+
+            <!-- Service Type & Vehicle Condition -->
+            <div class="col-md-6">
+              <label class="form-label">Service Type</label>
+              <select class="form-select" name="service">
+                <option value="open">Open Hauler</option>
+                <option value="enclosed">Enclosed Hauler</option>
+                <option value="express">Express Shipping</option>
+              </select>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label d-block">Vehicle Condition</label>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="vehicleCondition" name="vehicle_condition" value="Operable">
+                <label class="form-check-label" for="vehicleCondition">Operable (Uncheck if Inoperable)</label>
+              </div>
+            </div>
+
+            <!-- Additional Message -->
+            <div class="col-12">
+              <label class="form-label">Additional Message</label>
+              <textarea class="form-control" name="message" rows="4"></textarea>
+            </div>
+
+            <!-- Submit -->
+            <div class="col-12 d-flex justify-content-center">
+                <button type="submit" class="btn btn-orange">Request Quote</button>
+              </div>
+              
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <p class="mb-0">&copy; 2025 TK Transport Solutions. All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
