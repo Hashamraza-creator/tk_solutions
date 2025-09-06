@@ -106,7 +106,7 @@
             <li><a href="/services.html" class="active">Our Services</a></li>
             <!-- <li><a href="#how-it-works">How It Works</a></li> -->
             <li><a href="/get-a-quaote.html">Get a Quote</a></li>
-            <li><a href="index.html">Customer Reviews</a></li>
+            <li><a href="/">Contract</a></li>
             <li><a href="/index.html">FAQ</a></li>
             <!-- <li><a href="#contact">Contact</a></li> -->
           </ul>
@@ -203,69 +203,161 @@
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer dark-background">
+
     <div class="container">
       <div class="row gy-5">
+  
+        <!-- About & Newsletter -->
         <div class="col-lg-4">
           <div class="footer-content">
             <a href="index.html" class="logo d-flex align-items-center mb-4">
               <span class="sitename">TK Transport Solutions</span>
             </a>
-            <p class="mb-4">Reliable and secure nationwide car shipping services. Whether you need to transport a single vehicle or a fleet, we ensure safe, on-time delivery every time.</p>
+            <p class="mb-4">
+              Reliable and secure nationwide car shipping services. Whether you need to transport a single vehicle or a fleet, we ensure safe, on-time delivery every time.
+            </p>
+  
+            <div class="newsletter-form">
+              <h5>Stay Updated</h5>
+              <form id="newsletter-form" class="php-email-form">
+                <div class="input-group">
+                  <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+                  <button type="submit" class="btn-subscribe">
+                    <i class="bi bi-send"></i>
+                  </button>
+                </div>
+                <div class="loading" style="display:none;">Loading...</div>
+                <div class="error-message" style="display:none; color: red;"></div>
+                <div class="sent-message" style="display:none; ">Thank you for subscribing!</div>
+              </form>
+            </div>
           </div>
         </div>
-
+        <!-- End About & Newsletter -->
+  
+        <!-- Company Links -->
         <div class="col-lg-2 col-6">
           <div class="footer-links">
             <h4>Company</h4>
             <ul>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="#">Testimonials</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="/about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+              <li><a href="/services.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+              <li><a href="#testimonials"><i class="bi bi-chevron-right"></i> Testimonials</a></li>
+              <li><a href="/get-a-quaote.html"><i class="bi bi-chevron-right"></i> Get a quote</a></li>
+              <li><a href="/shipping.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
             </ul>
           </div>
         </div>
-
+  
+        <!-- Services Links -->
         <div class="col-lg-2 col-6">
           <div class="footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><a href="#">Open Carrier Shipping</a></li>
-              <li><a href="#">Enclosed Auto Transport</a></li>
-              <li><a href="#">Door-to-Door Delivery</a></li>
-              <li><a href="#">Expedited Shipping</a></li>
-              <li><a href="#">Fleet Transport</a></li>
+              <li><a href="/open-hauler.html"><i class="bi bi-chevron-right"></i> Open Carrier Shipping</a></li>
+              <li><a href="/enclosed.html"><i class="bi bi-chevron-right"></i> Enclosed Auto Transport</a></li>
+              <li><a href="/door-to-door.html"><i class="bi bi-chevron-right"></i> Door-to-Door Delivery</a></li>
+              <li><a href="/expidited.html"><i class="bi bi-chevron-right"></i> Expedited Shipping</a></li>
             </ul>
           </div>
         </div>
-
+  
+        <!-- Contact Info -->
         <div class="col-lg-4">
           <div class="footer-contact">
             <h4>Get in Touch</h4>
-            <p><i class="bi bi-geo-alt"></i> 123 Auto Transport Lane, Houston, TX 77001, United States</p>
-            <p><i class="bi bi-telephone"></i> +1 (800) 555-1234</p>
-            <p><i class="bi bi-envelope"></i> support@tktransport.com</p>
+  
+            <div class="contact-item d-flex mb-3">
+              <div class="contact-icon me-3">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div class="contact-info">
+                <p>123 Auto Transport Lane<br>Houston, TX 77001<br>United States</p>
+              </div>
+            </div>
+  
+            <div class="contact-item d-flex mb-3">
+              <div class="contact-icon me-3">
+                <i class="bi bi-telephone"></i>
+              </div>
+              <div class="contact-info">
+                <p>+1 (800) 555-1234</p>
+              </div>
+            </div>
+  
+            <div class="contact-item d-flex">
+              <div class="contact-icon me-3">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div class="contact-info">
+                <p>support@tktransport.com</p>
+              </div>
+            </div>
+  
           </div>
         </div>
+        <!-- End Contact Info -->
+  
       </div>
     </div>
-
-    <div class="footer-bottom">
+  
+    <!-- Footer Bottom -->
+    <div class="footer-bottom mt-4 pt-3 border-top">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6">
-            <p>© Copyright <strong>TK Transport Solutions</strong>. All Rights Reserved</p>
-          </div>
-          <div class="col-lg-6 text-end">
-            <div class="credits">
-              Designed by <a href="#">Hasham Raza</a>
+            <div class="copyright">
+              <p>© <span>Copyright</span> <strong class="px-1 sitename">TK Transport Solutions</strong> <span>All Rights Reserved</span></p>
             </div>
+          </div>
+          <div class="col-lg-6 text-lg-end">
+            <div class="footer-bottom-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#">Cookie Policy</a>
+            </div>
+            <!-- <div class="credits">
+              Designed by <a href="#">Hasham Raza</a>
+            </div> -->
           </div>
         </div>
       </div>
     </div>
+  
   </footer>
+  
+  <!-- ✅ EmailJS Script (placed OUTSIDE footer grid) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("1rpV3mNkWab1waogJ"); // ⚡ Replace with your EmailJS Public Key
+    })();
+  
+    document.getElementById("newsletter-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+  
+      const form = this;
+      const loading = form.querySelector(".loading");
+      const sentMessage = form.querySelector(".sent-message");
+      const errorMessage = form.querySelector(".error-message");
+  
+      loading.style.display = "block";
+      sentMessage.style.display = "none";
+      errorMessage.style.display = "none";
+  
+      emailjs.sendForm("service_jaslj1r", "template_c3ebn3p", form)
+        .then(function() {
+          loading.style.display = "none";
+          sentMessage.style.display = "block";
+          form.reset(); // ✅ Clear email field after success
+        }, function(error) {
+          loading.style.display = "none";
+          errorMessage.innerHTML = "❌ Error: " + JSON.stringify(error);
+          errorMessage.style.display = "block";
+        });
+    });
+  </script>
+  
   <!-- End Footer -->
 
   <!-- Scroll Top -->
