@@ -129,10 +129,12 @@
   </section>
 
   <!-- Quote Form Section -->
-  <section class="quote-section">
+  <!-- Quote Form Section -->
+<section class="quote-section">
     <div class="container">
       <div class="quote-form">
-        <form action="submit-quote.php" method="POST">
+        <!-- Add the correct id -->
+        <form id="car-shipment-form">
           <div class="row g-4">
             <!-- Personal Info -->
             <div class="col-md-6">
@@ -147,21 +149,21 @@
               <label class="form-label">Phone</label>
               <input type="text" class="form-control" name="phone" required>
             </div>
-
+  
             <!-- Vehicle Info -->
             <div class="col-md-6">
               <label class="form-label">Car Make</label>
-              <input type="text" class="form-control" name="car_make" placeholder="e.g., Toyota" required>
+              <input type="text" class="form-control" name="car_make" required>
             </div>
             <div class="col-md-6">
               <label class="form-label">Car Model</label>
-              <input type="text" class="form-control" name="car_model" placeholder="e.g., Corolla" required>
+              <input type="text" class="form-control" name="car_model" required>
             </div>
             <div class="col-md-6">
               <label class="form-label">Car Year</label>
-              <input type="number" class="form-control" name="car_year" placeholder="e.g., 2022" min="1900" max="2025" required>
+              <input type="number" class="form-control" name="car_year" min="1900" max="2025" required>
             </div>
-
+  
             <!-- Pickup & Delivery -->
             <div class="col-md-6">
               <label class="form-label">Pickup Location</label>
@@ -171,7 +173,7 @@
               <label class="form-label">Delivery Location</label>
               <input type="text" class="form-control" name="delivery" required>
             </div>
-
+  
             <!-- Service Type & Vehicle Condition -->
             <div class="col-md-6">
               <label class="form-label">Service Type</label>
@@ -181,7 +183,7 @@
                 <option value="express">Express Shipping</option>
               </select>
             </div>
-
+  
             <div class="col-md-6">
               <label class="form-label d-block">Vehicle Condition</label>
               <div class="form-check form-switch">
@@ -189,22 +191,56 @@
                 <label class="form-check-label" for="vehicleCondition">Operable (Uncheck if Inoperable)</label>
               </div>
             </div>
-
+  
             <!-- Additional Message -->
             <div class="col-12">
               <label class="form-label">Additional Message</label>
               <textarea class="form-control" name="message" rows="4"></textarea>
             </div>
-
+  
             <!-- Submit -->
             <div class="col-12 d-flex justify-content-center">
-                <button type="submit" class="btn btn-orange">Request Quote</button>
-              </div>
-              
+              <button type="submit" class="btn btn-orange">Request Quote</button>
+            </div>
+  
+            <!-- Messages -->
+            <div class="col-12 text-center mt-3">
+              <div class="loading" style="display:none;">Sending...</div>
+              <div class="sent-message text-success" style="display:none;">✅ Your request has been sent successfully!</div>
+              <div class="error-message text-danger" style="display:none;"></div>
+            </div>
           </div>
         </form>
       </div>
     </div>
+  </section>
+  
+  <!-- EmailJS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("1rpV3mNkWab1waogJ"); // ✅ Your Public Key
+    })();
+  
+    document.getElementById("car-shipment-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+  
+      document.querySelector(".loading").style.display = "block";
+  
+      emailjs.sendForm("service_jaslj1r", "template_c3ebn3p", this)
+        .then(function(response) {
+          document.querySelector(".loading").style.display = "none";
+          document.querySelector(".sent-message").style.display = "block";
+          document.querySelector(".error-message").style.display = "none";
+        }, function(error) {
+          document.querySelector(".loading").style.display = "none";
+          document.querySelector(".error-message").innerHTML = "Error: " + JSON.stringify(error);
+          document.querySelector(".error-message").style.display = "block";
+        });
+    });
+  </script>
+  
+          
   </section>
 
   <!-- Footer -->

@@ -174,8 +174,9 @@
           <h2>Book Your Transport</h2>
           <p>Fill in your details below to request a booking.</p>
         </div>
-
-        <form action="forms/booking.php" method="post" class="row g-3 shadow p-4 rounded bg-white">
+    
+        <!-- ✅ Add an ID for JS targeting -->
+        <form id="booking-form" class="row g-3 shadow p-4 rounded bg-white">
           <div class="col-md-6">
             <label class="form-label">Full Name</label>
             <input type="text" name="name" class="form-control" required>
@@ -220,16 +221,51 @@
             <label class="form-label">Preferred Date</label>
             <input type="date" name="date" class="form-control" required>
           </div>
+    
           <div class="form-check form-switch">
-            <input class="form-check-input"  type="checkbox" id="servicesSwitch">
+            <input class="form-check-input" type="checkbox" id="servicesSwitch" name="operable" value="Yes">
             <label class="form-check-label" style="color:#F38B00;" for="servicesSwitch">Operable</label>
           </div>
+    
           <div class="col-12 text-center">
             <button type="submit" class="btn px-4" style="background:#F38B00; border:none; color:white;">Submit Booking</button>
           </div>
+    
+          <!-- ✅ Feedback messages -->
+          <div class="col-12 text-center mt-3">
+            <div class="loading" style="display:none;">Sending...</div>
+            <div class="sent-message text-success" style="display:none;">✅ Your booking request has been sent successfully!</div>
+            <div class="error-message text-danger" style="display:none;"></div>
+          </div>
         </form>
       </div>
+    
+      <!-- EmailJS -->
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+      <script>
+        (function() {
+          emailjs.init("1rpV3mNkWab1waogJ"); // ✅ Your Public Key
+        })();
+    
+        document.getElementById("booking-form").addEventListener("submit", function(event) {
+          event.preventDefault();
+    
+          document.querySelector(".loading").style.display = "block";
+    
+          emailjs.sendForm("service_jaslj1r", "template_c3ebn3p", this)
+            .then(function(response) {
+              document.querySelector(".loading").style.display = "none";
+              document.querySelector(".sent-message").style.display = "block";
+              document.querySelector(".error-message").style.display = "none";
+            }, function(error) {
+              document.querySelector(".loading").style.display = "none";
+              document.querySelector(".error-message").innerHTML = "Error: " + JSON.stringify(error);
+              document.querySelector(".error-message").style.display = "block";
+            });
+        });
+      </script>
     </section>
+    
     <!-- /Booking Table Section -->
 
   </main>
