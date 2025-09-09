@@ -136,7 +136,13 @@
     });
 
   });
-
+  document.addEventListener("contextmenu", e => e.preventDefault());
+  document.onkeydown = function(e) {
+    if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C'))) {
+      return false;
+    }
+  };
+  
   /**
    * Init swiper sliders
    */
