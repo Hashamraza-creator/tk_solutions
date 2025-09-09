@@ -55,6 +55,7 @@
 body {
   color: var(--default-color);
   background-color: var(--background-color);
+  padding-top: 80px;
 }
 
 a {
