@@ -135,7 +135,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgb(233, 131, 53);
+  --background-color: var(--accent-color);
   --heading-color: #ffffff;
   color: var(--default-color);
   transition: all 0.5s;
