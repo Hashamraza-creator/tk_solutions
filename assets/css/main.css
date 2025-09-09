@@ -134,7 +134,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(0, 0, 0, 0);
+  --background-color: rgb(233, 131, 53);
   --heading-color: #ffffff;
   color: var(--default-color);
   transition: all 0.5s;
@@ -277,7 +277,7 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color);
+    color: white;
   }
 
   .navmenu .dropdown ul {
