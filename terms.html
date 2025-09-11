@@ -200,68 +200,102 @@
       <label for="clientName">Client Name:</label>
       <input type="text" id="clientName" class="form-control mb-2">
     </div>
-
+    <label for="clientEmail">Email:</label>
+    <input type="email" id="clientEmail" class="form-control mb-2">
+  
+    <label for="carMake">Car Make:</label>
+    <input type="text" id="carMake" class="form-control mb-2">
+  
+    <label for="carModel">Car Model:</label>
+    <input type="text" id="carModel" class="form-control mb-2">
+  
+    <label for="carYear">Car Year:</label>
+    <input type="number" id="carYear" class="form-control mb-2">
+  
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="tel" id="phoneNumber" class="form-control mb-2">
     <div class="fixed-footer">
       <button id="submitBtn" class="btn btn-dark" style="color: orange;">Submit Agreement</button>
     </div>
   </div>
 
   <!-- Signature Pad -->
-  <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
-  <!-- EmailJS -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-  <script>
-    (function() {
-      emailjs.init("1rpV3mNkWab1waogJ"); // ✅ Replace with your EmailJS public key
-    })();
+<script>
+  (function() {
+    emailjs.init("1rpV3mNkWab1waogJ"); // ✅ Replace with your EmailJS Public Key
+  })();
 
-    const canvas = document.getElementById("signature-pad");
-    const signaturePad = new SignaturePad(canvas);
+  const canvas = document.getElementById("signature-pad");
+  const signaturePad = new SignaturePad(canvas);
 
-    function resizeCanvas() {
-      const ratio = Math.max(window.devicePixelRatio || 1, 1);
-      canvas.width = canvas.offsetWidth * ratio;
-      canvas.height = canvas.offsetHeight * ratio;
-      canvas.getContext("2d").scale(ratio, ratio);
-      signaturePad.clear();
+  function resizeCanvas() {
+    const ratio = Math.max(window.devicePixelRatio || 1, 1);
+    canvas.width = canvas.offsetWidth * ratio;
+    canvas.height = canvas.offsetHeight * ratio;
+    canvas.getContext("2d").scale(ratio, ratio);
+    signaturePad.clear();
+  }
+  window.onresize = resizeCanvas;
+  resizeCanvas();
+
+  // Clear signature
+  document.getElementById("clear").addEventListener("click", () => {
+    signaturePad.clear();
+  });
+
+  // Submit agreement
+  document.getElementById("submitBtn").addEventListener("click", () => {
+    if (signaturePad.isEmpty()) {
+      alert("⚠️ Please provide a signature first.");
+      return;
     }
-    window.onresize = resizeCanvas;
-    resizeCanvas();
 
-    document.getElementById("clear").addEventListener("click", () => {
+    const dataURL = signaturePad.toDataURL();
+    const name = document.getElementById("clientName").value.trim();
+    const email = document.getElementById("clientEmail").value.trim();
+    const carMake = document.getElementById("carMake").value.trim();
+    const carModel = document.getElementById("carModel").value.trim();
+    const carYear = document.getElementById("carYear").value.trim();
+    const phone = document.getElementById("phoneNumber").value.trim();
+    const date = new Date().toLocaleDateString();
+
+    // Validation
+    if (!name || !email || !carMake || !carModel || !carYear || !phone) {
+      alert("⚠️ Please fill all fields.");
+      return;
+    }
+
+    // Send via EmailJS
+    emailjs.send("service_jaslj1r", "template_kqvg708", {
+      name: name,
+      email: email,
+      car_make: carMake,
+      car_model: carModel,
+      car_year: carYear,
+      phone: phone,
+      date: date,
+      signature: dataURL
+    })
+    .then(() => {
+      alert("✅ Agreement submitted and sent to email!");
       signaturePad.clear();
+      // Reset form fields
+      document.getElementById("clientName").value = "";
+      document.getElementById("clientEmail").value = "";
+      document.getElementById("carMake").value = "";
+      document.getElementById("carModel").value = "";
+      document.getElementById("carYear").value = "";
+      document.getElementById("phoneNumber").value = "";
+    }, (error) => {
+      alert("❌ Failed to send: " + JSON.stringify(error));
     });
+  });
+</script>
 
-    document.getElementById("submitBtn").addEventListener("click", () => {
-      if (signaturePad.isEmpty()) {
-        alert("Please provide a signature first.");
-        return;
-      }
-
-      const dataURL = signaturePad.toDataURL();
-      const name = document.getElementById("clientName").value.trim();
-      const date = new Date().toLocaleDateString();
-
-      if (!name) {
-        alert("Please enter your name.");
-        return;
-      }
-
-      emailjs.send("service_jaslj1r", "template_kqvg708", {
-        client_name: name,
-        date: date,
-        signature: dataURL
-      })
-      .then(() => {
-        alert("✅ Agreement submitted and sent to email!");
-        signaturePad.clear();
-        document.getElementById("clientName").value = "";
-      }, (error) => {
-        alert("❌ Failed to send: " + JSON.stringify(error));
-      });
-    });
-  </script>
   <script src="/assets/js/main.js"></script>
 </body>
 </html>
